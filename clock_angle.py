@@ -1,9 +1,9 @@
 import math
 def clock_angle(hour, min, second, type):
     if type in ['degree', 'radian']:
-        hour_hand = (hour + min/60 + second/3600)
-        min_hand = (min + second/60)
-        difference = abs(hour_hand - min_hand)/12
+        hour_hand = (hour + min/60 + second/3600)/12
+        min_hand = (min + second/60)/60
+        difference = abs(hour_hand - min_hand)
         if type == 'degree':
             return difference*360
         if type == 'radian':
